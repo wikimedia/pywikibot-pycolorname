@@ -12,7 +12,7 @@ scriptdir = os.path.dirname(sys.argv[0])
 if not os.path.isabs(scriptdir):
     scriptdir = os.path.abspath(os.path.join(os.curdir, scriptdir))
 
-target = os.path.join(scriptdir, 'dtbext/pycolorname')
+target = os.path.join(scriptdir, 'externals/pycolorname')
 path = list(os.path.split(os.path.abspath(os.curdir)))
 if target not in path:
     path.append( target )
