@@ -8,16 +8,8 @@ Created on Sat Jun 30 22:57:26 2012
 import pickle, os, sys
 
 
-scriptdir = os.path.dirname(sys.argv[0])
-if not os.path.isabs(scriptdir):
-    scriptdir = os.path.abspath(os.path.join(os.curdir, scriptdir))
-
-target = os.path.join(scriptdir, 'externals/pycolorname')
-path = list(os.path.split(os.path.abspath(os.curdir)))
-if target not in path:
-    path.append( target )
-path.append( '%s' )
-path = os.path.join(*path)
+scriptdir = os.path.dirname(os.path.abspath(__file__))
+path = os.path.join(scriptdir, '%s')
 
 
 def storeData(filename, data):
